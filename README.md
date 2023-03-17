@@ -25,7 +25,7 @@ with the following parameters
 * ```--folder``` the input folder including document images
 * ```--output``` the output folder for the deskewed images
 
-## Table Structure Recognition (TSR)
+## Table Structure Recognition
 For the table structure recognition we offer a simple script for different approaches
 
 * ```tsr.py```
@@ -41,7 +41,7 @@ with the following parameters
 * ```--img_output``` output folder path for the processed images
 * ```--xml_output``` output folder path for the xml files including bounding boxes
 
-## Table Detection and Table Structure Recognition (TD & TSR)
+## Table Detection and Table Structure Recognition
 
 To appy the table detection with a followed table structure recogniton 
 
