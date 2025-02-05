@@ -1,6 +1,6 @@
-# Instructions
+# 📜 Instructions
 
-## Configurations
+## ⚙️ Configurations
 The source code requires the following dependencies:
 
 * **PyTorch** = 1.7.0
@@ -10,10 +10,10 @@ The source code requires the following dependencies:
 
 Ensure these dependencies are installed before proceeding.
 
-## Detectron2
+## 📷 Detectron2
 The table detection model is based on [Detectron2](https://github.com/facebookresearch/detectron2). Follow the official [installation guide](https://detectron2.readthedocs.io/en/latest/tutorials/install.html) to set it up correctly.
 
-## Image Alignment Pre-Processing
+## 🖼️ Image Alignment Pre-Processing
 For image alignment pre-processing, use the following script:
 
 * **`deskew.py`**
@@ -24,11 +24,11 @@ To apply the image alignment algorithm to all images in a folder, run:
 python3 deskew.py --folder <input_folder> --output <output_folder>
 ```
 
-### Parameters:
+### 📝 Parameters:
 * `--folder` : Path to the input folder containing document images.
 * `--output` : Path to the output folder where the deskewed images will be saved.
 
-## Table Structure Recognition
+## 📑 Table Structure Recognition
 For table structure recognition, use:
 
 * **`tsr.py`**
@@ -39,13 +39,13 @@ To apply the table structure recognition algorithm to all images in a folder, ru
 python3 tsr.py --folder <input_folder> --type <table_type> --img_output <image_output_folder> --xml_output <xml_output_folder>
 ```
 
-### Parameters:
+### 📝 Parameters:
 * `--folder` : Path to the input folder containing table images.
 * `--type` : Type of table structure recognition (options: `bordered`, `unbordered`, `partially`, `partially_color_inv`).
 * `--img_output` : Path to the output folder for processed images.
 * `--xml_output` : Path to the output folder for XML files containing bounding boxes.
 
-## Table Detection and Table Structure Recognition
+## 📊 Table Detection and Table Structure Recognition
 To perform table detection followed by table structure recognition, use:
 
 * **`tdtsr.py`**
@@ -56,7 +56,7 @@ Run the script with the following command:
 python3 tdtsr.py --folder <input_folder> --type <table_type> --tsr_img_output <tsr_output_folder> --td_img_output <td_output_folder> --xml_output <xml_output_folder> --config <config_path> --yaml <yaml_path> --weights <weights_path>
 ```
 
-### Parameters:
+### 📝 Parameters:
 * `--folder` : Path to the input folder containing table images.
 * `--type` : Table structure recognition type (`bordered`, `unbordered`, `partially`, `partially_color_inv`).
 * `--tsr_img_output` : Output folder for processed table images.
@@ -66,7 +66,7 @@ python3 tdtsr.py --folder <input_folder> --type <table_type> --tsr_img_output <t
 * `--yaml` : Path to the Detectron2 YAML file for table detection.
 * `--weights` : Path to the Detectron2 model weights for table detection.
 
-## Evaluation
+## 📈 Evaluation
 To evaluate the table structure recognition algorithm, use:
 
 * **`evaluate.py`**
@@ -79,7 +79,7 @@ Run the evaluation script using:
 python3 evaluate.py --dataset <dataset_folder>
 ```
 
-### Parameters:
+### 📝 Parameters:
 * `--dataset` : Path to the dataset folder containing table images and corresponding XML labels.
 
 ---
